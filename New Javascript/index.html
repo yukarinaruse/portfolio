@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="design.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<title>JavaScript</title>
+</head>
+<body>
+<div id="container"></div>
+<div id="main-form">
+	<span id="label-text">読み上げる文章 :</span>
+	<div style="margin: 10px;"></div>
+	<textarea id="main-text"></textarea>
+	<br>
+	<button id="play" class="btn btn-outline-dark btn-col">再生</button>
+	<br>
+	<button id="text" class="btn btn-outline-dark btn-col">テキスト読み込み</button>
+	<button id="init" class="btn btn-outline-dark btn-col">文章の初めに戻る</button>
+</div>
+<div id="slider-container" class="center-pad">
+	<span id="read-speed">読み上げる間隔：<span id="display-speed">250</span> ms</span>
+	<br>
+	<input type="range" id="speed-slider" value="250" min="1" max="500" step="1">
+</div>
+<div id="slider-container" class="center-pad">
+	<span id="text-size">テキストサイズ：<span id="display-size">18</span> px</span>
+	<br>
+	<input type="range" id="text-slider" value="30" min="1" max="100" step="1">
+</div>
+</body>
+</html>
