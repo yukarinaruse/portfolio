@@ -1,79 +1,76 @@
 @charset "utf-8";
 
 .wrapper {
-    margin: 15px auto;
-    max-width: 700px;
-}
-
-.container-calendar {
-    background: #ffffff;
-    padding: 15px;
-    width: 100%;
     margin: 0 auto;
-    overflow: auto;
+    max-width: 600px;
 }
 
-.button-container-carendar button {
-    cursor: pointer;
-    display: inline-block;
-    zoom: 1;
-    background: #00a2b7;
-    color: #fff;
-    border: 1px solid #0aa2b5;
-    border-radius: 4px;
-    padding: 5px 10px;
+#header {
+    text-align: center;
+    font-size:24px;
+    width: 100%;
+    margin: 1rem 0 0;
 }
 
-.teble-calendar {
-    border-collapse: collapse;
+#calendar {
+    text-align: center;
     width: 100%;
 }
 
-.table-calendar {
+table {
+    outlin: 2px solid #ddd;
     border-collapse:  collapse;
-    width: 100%;
+    width:100%;
 }
 
-.table-calendar th,
-.table-calendar td {
-    padding: 10px;
-    border: 1px solid #e2e2e2;
+th {
+    color: #000;
+}
+
+th, td {
+    outline: 1px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
-    vertical-align: top;
 }
 
-.date-picker.selected {
-    font-weight: bold;
+td:first-child {
+    color: red;
+}
+
+td:last-child {
+    color: blue;
+}
+
+td.disabled {
+    color:#ccc;
+}
+
+td.today {
+    background-color: #D65E72;
     color: #fff;
-    background: #cc0000;
 }
 
-.date-picker.selected span {
-    border-bottom: 2px solid currentColor;
-}
-
-/*-----日曜----*/
-.date-picker:nth-child(1){
-    color:  red;
-}
-/*-----土曜----*/
-.date-picker:nth-child(7){
-    color:  blue;
-}
-
-#monthAndYear {
-    text-align: center;
-    margin-top: 0;
-}
-    
-.button-container-calendar {
+#next-prev-button {
     position: relative;
-    margin-bottom: 1em;
-    overflow: hidden;
-    clear:  both;
+}
+#next-prev-button button {
+    cursor: pointer;
+    background: #B78D4A;
+    color: #fff;
+    border: 1px solid #B78D4A;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin:1rem 0;
 }
 
-#previous {
+#next-prev-button button:hover {
+    background-color: #D4BB92;
+    border-color: #D4BB92;
+}
+
+#prev {
     float: left;
 }
 
@@ -81,19 +78,3 @@
     float: right;
 }
 
-.footer-container-calendar {
-    margin-top: 1em;
-    border-top: 1px solid #dadada;
-    padding: 10px 0;
-}
-
-
-footer-container-carendar select {
-    cursor: pointer;
-    display: inline-block;
-    zoom: 1;
-    background: #ffffff;
-    color: #454545;
-    border-radius: 3px;
-    padding: 5px 1em;
-}
