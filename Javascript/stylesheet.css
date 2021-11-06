@@ -1,8 +1,9 @@
 @charset "utf-8";
 
 .wrapper {
-    margin: 0 auto;
     max-width: 600px;
+    margin: 0 auto;
+    color:  #666;
 }
 
 #header {
@@ -18,7 +19,7 @@
 }
 
 table {
-    outlin: 2px solid #ddd;
+    outline: 2px solid #ddd;
     border-collapse:  collapse;
     width:100%;
 }

@@ -41,7 +41,7 @@ function createProcess(year,month){
     var startDayOfWeek = new Date(year,month,1).getDay();
     var endDate = new Date(year,month + 1,0).getDate();
     var lastMonthEndDate = new Date(year,month,0).getDate();
-    var row = Math.cell((startDayOfWeek + endDate) / week.length);
+    var row = Math.ceil((startDayOfWeek + endDate) / week.length);
     
     //1行ずつ設定
     for (var i = 0; i< row; i++) {
@@ -71,3 +71,4 @@ function createProcess(year,month){
     }
     return calendar;
 }
+
