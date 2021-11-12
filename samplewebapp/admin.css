@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.warn {
+    color: red;
+    font-weight: bold;
+}
+
+.count {
+    text-align: right;
+}
+
+th {
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,td {
+    border: 1px solid #999;
+}
