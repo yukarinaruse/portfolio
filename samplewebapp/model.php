@@ -50,7 +50,7 @@ $tables = [
         'pkey' => [0],
         'data' => [
                 'cols' => [1,2],
-                'values' > [
+                'values' => [
                     ['Rose', 4],
                     ['SunFlower', 7],
                     ['Tulip', 5]
@@ -65,9 +65,11 @@ $tables = [
     
     include 'showData.php';
     
+    #切断
+    $link->close();
     
     $json = [
-            'reult' => '初期化完了',
+            'result' => '初期化完了',
             'html' => $html
     ];
     echo json_encode($json);

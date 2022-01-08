@@ -2,7 +2,7 @@
 #接続
 const HOST = 'localhost';# ホスト名
 const USER = 'root';# 接続ユーザー名
-const PASS = 'YourSecurePassword';# パスワード
+const PASS = 'Yu136597!';# パスワード
 
 
 # glibalで使うmysqliオブジェクト
@@ -22,7 +22,7 @@ function select($sql, $display = false) {
     global $link;
     $result = $link->query($sql);
     $rows = [];
-    while($row = $result->fetch_assoc()) $row;
+    while($row = $result->fetch_assoc()) $rows[] = $row;
     $result->close();
     if($display) echo "{$sql}\n";
     return $rows;
@@ -31,7 +31,7 @@ function select($sql, $display = false) {
 # SELECT文以外を実行するだけ
 function execute($sql, $display = false) {
     global $link;
-    $link>query($sql);
+    $link->query($sql);
     if($display) echo"{$sql}\n";
     return !$link->error;
 }

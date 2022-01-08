@@ -2,7 +2,7 @@
 #モードが空の場合、何をするかわからないので、処理中断
 if(empty($_GET['mode'])) exit;
 
-require_once 'detabase.php';
+require_once 'database.php';
 
 function echoHTML($sql,$msg) {
     global $link;
@@ -16,6 +16,9 @@ function echoHTML($sql,$msg) {
     
 # 管理画面の品目一覧のﾃｰﾌﾞﾙHTMLを生成
     include 'showData.php';
+    
+    #切断
+    $link->close();
     
     $json = [
             'result' => $response,
@@ -78,7 +81,7 @@ switch($_GET['mode']) {
                 echoHTML("UPDATE `flower` SET `count`=" .((int)$result[0]['count'] + (int)$_POST['count']) . "WHERE `name`='" . str_replace("'","''".$_POST['name']) . "';", '在庫を追加しました');
         } else {# 0件＝存在しない
 # INSERT
-                echoHTML("INSERT INTO `flwer`(`name`,`count`) VALUES('" . str_replace("'","''",$_POST['name']) . "'," . (int)$_POST['count'] / ');','登録完了');
+                echoHTML("INSERT INTO `flower`(`name`,`count`) VALUES('" . str_replace("'","''",$_POST['name']) . "'," . (int)$_POST['count'] . ');','登録完了');
         }
         break;
         

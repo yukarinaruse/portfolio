@@ -1,17 +1,29 @@
+window.onload=() =>{
 const wrap = document.getElementById('wrap');
 const start = document.getElementById('start');
 
 
-
+//文字一覧
 const textLists = [
-    'ああああああああああ','いいいいいいいいいいいいい',
-    'うううううううううううう','えええええ','おおおおおおおお'
+    'Hello World','This is my App','How are you?',
+    'Today is sunny','I love JavaScript!','Good morning',
+    'I am Japanese','Let it be','Samurai',
+    'Typing Game','Information Technology',
+    'I want to be a programmer','What day is today?',
+    'I want to build a web app','Nice to meet you',
+    'Chrome Firefox Edge Safari','machine learning',
+    'Brendan Eich','John Resig','React Vue Angular',
+    'Netscape Communications','undefined null NaN',
+    'Thank you very much','Google Apple Facebook Amazon',
+    'ECMAScript','console.log','for while if switch',
+    'var let const','Windows Mac Linux iOS Android',
+    'programming'
     ];
 
 
 let checkTexts = [];
 let score = 0;
-
+//ランダムなテキストを画面に表示する
 const createText = () => {
     const p = document.getElementById('text');
     const rnd = Math.floor(Math.random() * textLists.length);
@@ -27,7 +39,7 @@ const createText = () => {
         return span;
         });
     };
-    
+    //キーイベント＆入力判定処理
     const keyDown = e => {
         wrap.style.backgroundColor = '#666';
         if(e.key === checkTexts[0].textContent) {
@@ -44,7 +56,7 @@ const createText = () => {
         }
     };
     
-    
+    //ランク判定とメッセージ生成処理
     const rankCheck = score => {
         let text = '';
         
@@ -61,7 +73,7 @@ const createText = () => {
         
         return `${score}文字打てました！\n${text}\n【OK】リトライ／【キャンセル】終了`;
     };
-    
+    //ゲームの終了処理
     const gameOver = id => {
         clearInterval(id);
         
@@ -70,7 +82,7 @@ const createText = () => {
         if(result) window.location.reload();
     };
     
-    
+    //タイマー処理
     const timer = () => {
         let time = 60;
         const count = document.getElementById('count');
@@ -81,10 +93,11 @@ const createText = () => {
         }, 1000);
     };
     
-    
+    //ゲームスタート時の処理
     start.addEventListener('click', () => {
         timer();
         createText();
         start.style.display = 'none';
         document.addEventListener('keydown', keyDown);
-    })
+    });
+};

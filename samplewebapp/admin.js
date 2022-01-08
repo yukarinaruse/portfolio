@@ -3,7 +3,7 @@ window.onload = () => {
     
     
     function showResult(data) {
-        document.getElementById('result').textContet = data.result;// 今回はメッセージが来る
+        document.getElementById('result').textContent = data.result;// 今回はメッセージが来る
         document.getElementById('data').innerHTML = data.html;// HTMLのtable要素の内容
         setButtonEvent();
     }
@@ -24,6 +24,8 @@ window.onload = () => {
                 mode = 'update';// モード切替
                 document.getElementById('buttonExe').textContent = '更新';//実行ボタンの名目を変更
                 document.getElementById('id').value = me.getAttribute('data-id');// 隠し項目
+                document.getElementById('name').value = me.getAttribute('data-name');// 品目
+				document.getElementById('count').value = me.getAttribute('data-count');// 在庫
             };
         }
         
@@ -56,7 +58,7 @@ window.onload = () => {
     document.getElementById('buttonExe').onclick = e => {
 switch(mode) {
     case 'create':// 新規
-            fetchJSON('ajax.php','mode=create','name=' + document.getElementById('name').valie + '&count=' + document.getElementById('count').value).then(data => { showResult(data);});
+            fetchJSON('ajax.php','mode=create','name=' + document.getElementById('name').value + '&count=' + document.getElementById('count').value).then(data => { showResult(data);});
             break;
     case 'update':// 更新
             fetchJSON('ajax.php','mode=update','id=' + document.getElementById('id').value + '&name=' + document.getElementById('name').value + '&count=' + document.getElementById('count').value).then(data => { showResult(data);});

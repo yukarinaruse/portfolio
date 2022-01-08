@@ -15,5 +15,5 @@ async function fetchJSON(requestURL, getQuery = '', postQuery = '') {
     if(usePost) data.body = postQuery;
     
     const response = await fetch(requestURL + (getQuery != '' ? '?' + getQuery : ''), data);
-    return response.Json();
+    return response.json();
 }
