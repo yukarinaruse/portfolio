@@ -1,18 +1,16 @@
-window.onload=() =>{
-const wrap = document.getElementById('wrap');
-const start = document.getElementById('start');
+/*  スライダー  */
+window.onload = () => {
+    const slide = document.getElementById("slide_img");
+    const img_src = ["images/camp-001.jpg", "images/camp-002.jpg", "images/camp-006.jpg", "images/camp-004.jpg"];
+    let num = 0;
 
-
-const img_src = ["images/camp-001.jpg", "images/camp-002.jpg", "images/camp-006.jpg","images/camp-004.jpg",];
-    let num = -1;
- 
-function slide_time() {
-    if (num === 3) {
-        num = 0;
-        } else {
-        num++;
-        }
-    document.getElementById("slide_img").src = img_src[num];
+    function slide_time() {
+        num = ++num % img_src.length;
+        slide.src = img_src[num];
     }
- 
-setInterval(slide_time, 2500)};
+
+    setInterval(slide_time, 2500);
+}; 
+
+  
+  

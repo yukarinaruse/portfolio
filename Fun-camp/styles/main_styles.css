@@ -1,126 +1,154 @@
 @charset "UTF-8";
 
 * {
-    margin: 0;
-    padding: 0;
-    
-    font-family: 'Yu Gothic UI','Meiryo UI','ＭＳ Ｐゴシック','MS PGothic','MS UI Gothic','メイリオ', Meiryo,'ヒラギノ角ゴシック','Hiragino Sans','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Yu Gothic UI','Meiryo UI','ＭＳ Ｐゴシック','MS PGothic','MS UI Gothic','メイリオ', Meiryo,'ヒラギノ角ゴシック','Hiragino Sans','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
 
 }
 
+/* header */
+header{
+	background-color: #52ad87;
+}
+
+/* logo  */
 .f-left {
-    float: left;
+	float: left;
 }
+
+/* ddmenu */
 .f-right {
-    float: right;
+	float: right;
+	z-index: 100;
 }
 .clearfix::after {
-    display: block;
-    content: "";
-    clear: both;
+	display: block;
+	content: "";
+	clear: both;
 }
 
 ul, ol {
-    list-style-type: none;
+	list-style-type: none;
 }
 
-/* -------------------- */
-/* ▼メニューバーの装飾 */
-/* -------------------- */
-ul.ddmenu {
-   padding-left: 15px;/* メニューバー内側の余白 */
+/* メインメニュー項目の装飾 */
+ul.ddmenu>li:not(:first-child) {
+  margin-left: 1px;
 }
-
-/* -------------------------- */
-/* ▼メインメニュー項目の装飾 */
-/* -------------------------- */
 ul.ddmenu li {
-   display: inline-block;
-   width: 130px;/* メニュー項目の横幅 */
-   position: relative;
+	display: inline-block;
+	width: 135px;/* メニュー項目の横幅 */
+	line-height: 80px;/* メニュー項目の高さ */
+	position: relative;
+	background-color: rgb(36, 112, 83);/* 親メニュー項目の背景色  */
+	color: white;/* 親メニュー項目の文字色 */
+	text-align: center;
+	font-weight: bold;/* 太字にする(好み) */
 }
 ul.ddmenu a {
-   display: block;
-   background-color: rgb(18, 143, 60);/* メニュー項目の背景色 */
-   color: white;/* メニュー項目の文字色 */
-   line-height: 80px;/* メニュー項目のリンクの高さ */
-   text-align: center;
-   text-decoration: none;
-   font-weight: bold;/* 太字にする(好み) */
-}
-ul.ddmenu a:hover {
-   background-color: #acf05e; /* メニュー項目にマウスが載ったときの背景色 */
-   color: rgb(18,143,60);            /* メニュー項目にマウスが載ったときの文字色 */
+	display: block;
+	text-decoration: none;
 }
 
-/* ---------------------------------- */
-/* ▼サブメニューがある場合に開く処理 */   /* ※サブメニューが2階層以上ある場合の記述 */
-/* ---------------------------------- */
+/* ▼サブメニューがある場合に開く処理 */	/* ※サブメニューが2階層以上ある場合の記述 */
+
 ul.ddmenu li:hover > ul {
-   display: block;         /* ★マウスポインタが載っている項目の内部にあるリストを表示する */
+	display: block;/* ★マウスポインタが載っている項目の内部にあるリストを表示する */
 }
 
-/* -------------------- */
 /* ▼サブメニューの装飾 */
-/* -------------------- */
 ul.ddmenu ul {
-   margin: 0px;         /* ★サブメニュー外側の余白(ゼロ) */
-   padding: 0px;        /* ★サブメニュー内側の余白(ゼロ) */
-   display: none;       /* ★標準では非表示にする */
-   position: absolute;  /* ★絶対配置にする */
+	display: none;/* ★標準では非表示にする */
+	position: absolute;/* ★絶対配置にする */
+	line-height: 35px;
 }
 
-/* -------------------------------- */
 /* ▼サブメニュー(以降の)項目の装飾 */
-/* -------------------------------- */
 ul.ddmenu ul li {
-   width: 135px;               /* サブメニュー1項目の横幅(135px) */
-   border-top: 1px solid rgb(255, 255, 255); /* 項目上側の枠線(1pxの実線) */
+	width: 135px;/* サブメニュー1項目の横幅(135px) */
+	margin-top: 1px;
+	line-height: 35px;/* サブメニュー1項目の高さ(35px) */
+	text-align: left;/* 文字列の配置(左寄せ) */
+	background-color: rgb(58, 163, 105);/* 子メニュー項目の背景色 */
+	color: white;/* 子メニュー項目の文字色 */
+	font-weight: normal; /* 太字にはしない */
 }
 ul.ddmenu ul li a {
-   line-height: 35px;   /* サブメニュー1項目の高さ(35px) */
-   text-align: left;    /* 文字列の配置(左寄せ) */
-   padding-left: 5px;   /* 文字列前方の余白(5px) */
-   font-weight: normal; /* 太字にはしない */
+	line-height: 35px;/* サブメニュー1項目の高さ(35px) */
+	text-align: left;/* 文字列の配置(左寄せ) */
+	font-weight: normal;/* 太字にはしない */
+	
 }
 ul.ddmenu ul li a:hover {
-   background-color: #ffff80; /* サブメニュー項目にマウスが載ったときの背景色(淡い黄色) */
-   color: #005500;            /* サブメニュー項目にマウスが載ったときの文字色(濃い緑色) */
+	background-color: rgb(206, 72, 134);/* 孫メニュー項目にホバー時の背景色 */
+	color: #fffeff;/* 孫メニュー項目にホバー時の文字色 */
 }
 
-/* ----------------------------------- */
-/* ▼3階層目以降(孫メニュー以降)の装飾 */   /* ※下ではなく横(右)に表示します。 */
-/* ----------------------------------- */
+/* ▼3階層目以降(孫メニュー以降)の装飾 */	/* ※下ではなく横(右)に表示します。 */
 ul.ddmenu ul ul {
-   margin: 0px;         /* ★サブメニュー外側の余白(ゼロ) */
-   padding: 0px;        /* ★サブメニュー内側の余白(ゼロ) */
-   display: none;       /* ★標準では非表示にする */
-   position: absolute;  /* ★絶対配置にする */
-   top: -1px;           /* 1pxだけ上方向にずらす(※上に1pxの枠線を引いている場合) */
-   left: 100%;          /* ★基準位置からの距離を親ボックスの幅100％にする */
-   border-left: 1px solid rgb(255, 255, 255); /* 左側に引く枠線(ピンク色で1pxの実線) */
+	display: none;		/* ★標準では非表示にする */
+	position: absolute;  /* ★絶対配置にする */
+	top: -1px;			/* 1pxだけ上方向にずらす(※上に1pxの枠線を引いている場合) */
+	left: 100%;		  /* ★基準位置からの距離を親ボックスの幅100％にする */
+	border-left: 1px solid rgb(255, 255, 255); /* 左側に引く枠線 */
 }
 
 /* slider */
 .slider {
-    width: 100%;
-    max-width: 100%;
-    height: 600px;
-    display: flex;
-    text-align: center;
+	width: 100%;
+	max-width: 100%;
+	height: 600px;
+	display: flex;
+	text-align: center;
 }
 
+
+/* main */
+main {
+	width: 1000px;
+	margin: 0 auto;
+} 
+
+
 /* footer */
+footer{
+	background-color: #52ad87;
+	clear: both;
+	
+}
+
+/* footer mnners */
 #manners {
-    background-color: #b1fab5;
-    text-align: center;
-    line-height: 2;
+	background-color: #bbffe5;
+	text-align: center;
+	line-height: 2;
 }
 
 #manners em {
-    color: rgb(255, 35, 35);
+	color: rgb(236, 4, 132);
 }
 
 #manners h2 {
-    text-decoration: underline #03812d;/*下線*/
+	text-decoration: underline #026947;/*下線*/
 }
+
+/* footer about */
+.about {
+	position: relative;
+ }
+ .about p {
+	position: absolute;
+	color:red;
+	font-weight: bold;
+	font-size: 2em;
+	top: 0;
+	left: 0;
+ }
+ .about img {
+	width: 100%;
+ 
+ }
