@@ -10,7 +10,8 @@ session_start();
 	<title>Fun-camp</title>
 	<link rel="icon" type="image/x-icon" href="images/Fun-camp-logo.png">
 	<link rel="stylesheet" href="styles/main_styles.css">
-	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
     <script src="styles/script.js"></script>
 </head>
 <?php
