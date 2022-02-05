@@ -1,7 +1,27 @@
 <?php
-include 'database.php';
-include 'header.php';
-include 'review.php';
+ob_start();
+session_start();
+?><!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Fun-camp</title>
+	<link rel="icon" type="image/x-icon" href="images/Fun-camp-logo.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/main_styles.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="styles/script.js"></script>
+</head>
+<body>
+<?php
+require_once 'database.php';
+require_once 'header.php';
+require_once 'review.php';
+require_once 'product.php';
 ?>
 
 
@@ -55,4 +75,4 @@ if ($_POST) {
 </div>
 
 <?php
-include 'footer.php'; 
+include 'footer.php';  

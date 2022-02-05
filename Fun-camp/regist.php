@@ -48,7 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 }
 ?>
 <!-- header.php出力 -->
-<?php include 'header.php'; ?>
+<?php require_once 'header.php'; ?>
+
+
 <div class="container mt-5 pt-5">
     <div class="row">
         <div class="col-md-6 offset-md-3">

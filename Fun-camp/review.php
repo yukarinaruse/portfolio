@@ -24,7 +24,8 @@ function fetch_reviews($product_id, $mysqli) {
 
 	if( !$result ) {
 		// エラーが発生した場合
-		exit;
+		
+		return false;
 	} else {
 		if( mysqli_num_rows($result) == 0 ){
 			// 口コミが存在しない場合

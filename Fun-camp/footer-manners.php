@@ -1,5 +1,19 @@
-<!DOCTYPE html>
+<?php
+ob_start();
+session_start();
+ ?>
+ <!DOCTYPE html>
 <html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Fun-camp</title>
+	<link rel="icon" type="image/x-icon" href="images/Fun-camp-logo.png">
+	<link rel="stylesheet" href="styles/main_styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+    <script src="styles/script.js"></script>
+</head>
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +24,7 @@
 </head>
 
 <body>
-    <div id="manners">
+    <footer id="manners">
         <h2>皆さんは、<em>キャンプ場でのマナー</em>はしっかりと守っていますか？</h2>
             <p>キャンプに行くと、忙しい日常から離れ、自然の中で開放的な気持ちにもなるでしょう。<br>
             家族や仲の良い仲間たちに囲まれて、いつもより羽目をはずしたくなるのもわかります。<br>
@@ -32,7 +46,7 @@
             <p>では、どのキャンプ場にも共通する基本的なマナーとはどのようなものなのでしょうか。<br>
             こちらでは、これさえ押さえてけば安心なキャンプの基本マナーを6つご紹介します。</p>
 
-        <div class="manners-6">
+        <div class="manner-li">
             <h1><em>キャンプ場では挨拶をしよう</em></h1>
                 <h3><p>挨拶というのは、キャンプに限らずどんな場面においても大切なものです。<br>
                 特にキャンプシーズンになると、キャンプ場を利用する人も多くなるので当然、テントの距離なども近くなります。<br>
@@ -92,6 +106,6 @@
             <p>もし、キャンプをする上で何かわからないことがあれば、恥ずかしいと思わず遠慮なくキャンプ場のスタッフの方々に質問をすることが一番です。<br>
             たとえ悪気がなく意図的でなくても、<em>無意識のうちにルールを破ってしまっている可能性もあります。</em><br>
             そうならないためにも、不明点や、マナーやルールに関することも含めて積極的に確認をするようにしましょう。</p>
-    </div>
+    </footer>
 </body>
 </html>
