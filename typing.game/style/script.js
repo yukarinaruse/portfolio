@@ -5,6 +5,9 @@ const start = document.getElementById('start');
 
 //文字一覧
 const textLists = [
+    'answer to','at one’s disposal','back to the drawing board','blaze a trail',
+    'corner the market','first come','first served','hustle and bustle','in a nutshell','in arrears',
+    'in full swing','in lieu of','insofar as',
     'Hello World','This is my App','How are you?',
     'Today is sunny','I love JavaScript!','Good morning',
     'I am Japanese','Let it be','Samurai',

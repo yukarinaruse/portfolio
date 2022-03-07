@@ -1,11 +1,11 @@
-let enemy = 10;
+let enemy = 50;
 let command;
 let random;
 
 
 while(true) {
   command = prompt('敵が現れた！　（【1】攻撃　【2】逃げる)');
-  random = Math.floor(Math.random() * 10);
+  random = Math.floor(Math.random() * 30);
   
   //攻撃を選択
   if(command === '1') {
